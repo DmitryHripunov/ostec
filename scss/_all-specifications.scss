@@ -1,0 +1,104 @@
+.all-specifications {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100px 100px 0 144px;
+  display: none;
+  z-index: 100;
+  overflow-y: auto;
+  width: 100%;
+  background: #fff;
+  opacity: 0.95;
+}
+
+.all-specifications__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1130px;
+  overflow: hidden;
+  line-height: 22px;
+  color: var(--main-color);
+}
+
+.all-specifications__items {
+  align-items: baseline; 
+  display: flex; 
+  margin-bottom: 0.5em; 
+  font-family: 'Avenir';
+  font-weight: 500;
+  margin-bottom: 24px;
+  font-family: 'Avenir-medium';
+  font-weight: 900;
+}
+
+.all-specifications__items::before {
+  content: '';
+  border-bottom: 2px dotted var(--main-second-color); 
+  flex-grow: 1; 
+  order: 2; 
+}
+
+.all-specifications__desc {
+  text-align: left;
+  order: 3;
+  width:490px;
+  display: inline-block;
+}
+
+.all-specifications__close {
+  position: absolute;
+  display: block;
+  right: 66px;
+  top: 66px;
+  width: 36px;
+  height: 36px;
+  background: url("../img/png/BUrger.png") top center/cover no-repeat;
+}
+
+.spec-open {
+  overflow: hidden; 
+  .all-specifications {
+    display: block;
+  }
+  
+  .header {
+    display: none;
+  }
+}
+
+@media (max-width: 1160px) {
+  .all-specifications {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .all-specifications__close {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    top: 40px;
+    right:  42px;
+  }
+
+  .all-specifications__items {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .all-specifications__title {
+    font-family: 'Avenir-medium';
+    font-weight: 900;
+  }
+
+  .all-specifications__desc {
+    font-weight: 500;
+  }
+
+  .all-specifications__items::before {
+    border-bottom: none; 
+  }
+}

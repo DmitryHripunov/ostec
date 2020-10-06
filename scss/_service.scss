@@ -1,0 +1,144 @@
+.service {
+  padding-top: 96px;
+  padding-bottom: 66px;
+  background-color: #34372C;
+}
+
+.services__title {
+  border-bottom-color: #C4C4C4;
+  color: var(--brand);
+  margin-bottom: 32px;
+}
+
+.contract {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contract {
+  margin-bottom: 30px;
+}
+
+.contract__heading {
+  font-family: 'Avenir-medium';
+  margin: 0;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #FFFFFF;
+  max-width: 200px;
+  flex: 1 1 50%;
+}
+
+.contract__list {
+  @include list-reset;
+  max-width: 540px;
+  line-height: 24px;
+  color: #FFFFFF;
+  list-style-position: outside;
+  
+}
+
+.contract__list li {
+  position: relative;
+}
+
+.contract__list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contract__list li::before {
+  content: "•";
+  font-size: 130%;
+  line-height: 0;
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  color: var(--brand);
+}
+
+.services-adv__list {
+  position: relative;
+  display: flex;
+  @include list-reset;
+  color: #fff;
+  line-height: 24px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.services-adv__list::after {
+  position: absolute;
+  content: "";
+}
+
+.services-adv__items {
+  padding: 70px 40px;
+  flex: 1 1 25%;
+  border: 1px solid rgba(255, 255, 255, .1);
+  min-height: 340px;
+}
+
+.services-adv__items:first-child::before {
+  position: absolute;
+  content: "";
+  border-left: 8px solid var(--brand);
+  top: 0;
+  left: 41px;
+  height: 7%;
+}
+
+.services-adv__items span {
+  font-family: 'Avenir-demi';
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 16px;
+}
+
+@media(max-width: 1060px) {
+  .services-adv__list {
+    flex-wrap: wrap;
+  }
+
+  .services-adv__items {
+    flex: 1 1 50%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+} 
+
+@media(max-width: 800px) {
+  .service {
+    padding-top: 64px;
+  }
+  .contract {
+    flex-direction: column;
+  }
+
+  .contract__heading {
+    max-width: 300px;
+  }
+
+  .services-adv__items:first-child::before {
+    display: none;
+  }
+
+  .contract__list li {
+    padding-left: 42px;
+  }
+
+  .contract__list li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .contract__list li::before {
+    left: 5px;
+  }
+
+  .contract__list {
+    margin-top: 24px;
+  }
+} 

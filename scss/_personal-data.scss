@@ -1,0 +1,43 @@
+.personal-data {
+  padding: 24px 0 80px;
+  border-top: 10px solid  #BFC3D3;
+}
+
+.personal-data__link {
+  display: block;
+  font-weight: 700;
+  background: url("../img/svg/chevron-left.svg") left center/20px 20px no-repeat;
+  padding-left: 28px;
+  margin-bottom: 56px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.personal-data__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.personal-data__list {
+  // list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+.personal-data__desc {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  max-width: 840px;
+}
+
+.personal-data__desc a {
+  color: #5a77e7
+}
+
+@media(max-width: 1350px) {
+  .personal-data {
+    border-top: 1px solid  #BFC3D3;
+  }
+}

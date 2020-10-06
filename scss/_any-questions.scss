@@ -1,0 +1,151 @@
+.any-questions {
+	background-color: var(--brand);
+	min-height: 350px;
+}
+
+.any-questions__container {
+	display: flex;
+}
+
+.any-questions__link,
+.any-questions__btn {
+	flex: 1 1 50%;
+	overflow: hidden;
+}
+
+.any-questions__link {
+	margin-right: 20px;
+}
+
+.any-questions__title {
+	font-family: 'Avenir-medium';
+	margin: 80px 0 0 0;
+	max-width: 280px;
+	font-weight: 900;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+.any-questions__link-email {
+	display: block;
+	margin-top: 35px;
+	min-height: 50px;
+	padding-left: 64px;
+	background: url("../img/svg/Subtract.svg") top left/50px 50px no-repeat;
+	color:  #151515;
+	opacity: .5;
+	transition: opacity .3s ease;
+}
+
+.any-questions__link-email:hover {
+	opacity: 1;
+	transition: opacity .2s linear;
+}
+
+.any-questions__link-text {
+	font-family: 'Avenir-medium';
+	font-weight: 900;
+	font-size: 28px;
+	display: block;
+	opacity: .5;
+	line-height: 22px;
+	margin-bottom: 5px;
+	color:  #151515;
+}
+
+.any-questions__link-footnote {
+	opacity: .5;
+	font-size: 14px;
+	color: #151515;
+}
+
+.any-questions__btn-tel,
+.any-questions__btn-email {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 180px;
+	font-size: 28px;
+	font-family: 'Avenir-medium';
+	font-weight: 900;
+	background-color: var(--brand-auxiliary);
+	border-left: 1px solid rgba(255, 255, 255, .5);
+	border-right: 1px solid rgba(255, 255, 255, .5);
+}
+
+.any-questions__btn-tel {
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.any-questions__btn-tel::after,
+.any-questions__btn-email::after {
+	content: "";
+	@include all-position;
+	transition: color .2s linear;
+}
+
+.any-questions__btn-tel:hover,
+.any-questions__btn-email:hover {
+	color: #fff;
+	transition: color .2s linear;
+}
+
+.mobile-btn-tel,
+.mobile-btn-email {
+  display: none;
+}
+
+@media(max-width: 768px) {
+	.any-questions__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .any-questions__title {
+    margin: 56px auto 48px;
+    text-align: center;
+  }
+
+  .any-questions__link-email {
+    text-align: center;
+    opacity: 1;
+    background-position: top center;
+    padding: 60px 0 50px;
+    color: var(--main-color);
+  }
+
+  .any-questions__link-text,
+  .any-questions__link-footnote {
+    color: var(--main-color);
+    opacity: 1;
+  }
+
+  .any-questions__link {
+    margin-right: 0;
+    flex:1 1 100%;
+    width: 100%;
+  }
+
+  .any-questions__btn {
+    display: none;
+  }
+
+  .mobile-btn-tel {
+    border-top: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  .mobile-btn-tel,
+  .mobile-btn-email {
+    display: block;
+    color: #151515;
+    text-align: center;
+    font-family: 'Avenir-medium';
+    font-weight: 900;
+    font-size: 28px;
+    padding: 35px 0;
+    background-color: var(--brand-auxiliary);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+}

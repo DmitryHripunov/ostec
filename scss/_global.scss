@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root { 
+  --main-color: #000;
+  --main-second-color: #07150A;
+  --main-auxiliary-color: #616161;
+  --white-color:  #ffffff;
+  --white-auxiliary-color: #e7e7e7;
+  --brand: #94eb00;
+  --brand-auxiliary: #8ed701;
+}
+
+
+body {
+  min-width: 320px;
+  background-color: #fff;
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: normal;
+  color: var(--main-color);
+  margin: 0;
+}
+
+body.modal-active {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input:active {
+  outline: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /*IE6, IE*/
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.fixed-container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 10px 0 26px;
+}
+
+.inner-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 48px;
+}
+
+.inner-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  max-width: 278px;
+  min-height: 44px;
+  background-color: var(--brand);
+  transition:  background-color .2s ease;
+  &:hover {
+    background-color: var(--brand-auxiliary);
+    transition:  background-color .2s ease;
+  }
+}
+
+.invest-btn {
+  margin: 0 auto;
+  min-width: 328px;
+  min-height: 62px;
+}
+
+.section-title {
+  color: var(--main-second-color);
+  font-family: 'Avenir-demi';
+  font-size: 48px;
+  line-height: 54px;
+  margin: 0;
+  padding-bottom: 18px;
+  border-bottom: 8px solid var(--brand-auxiliary);
+}

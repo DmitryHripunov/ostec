@@ -1,0 +1,23 @@
+@import '_normalize';
+@import '_fonts';
+@import '_global';
+
+@import '_variables.scss';
+@import '_mixin.scss';
+@import '_functions.scss';
+
+// styles
+@import 'header';
+@import 'form';
+@import 'main-section';
+@import 'specifications';
+@import 'service';
+@import 'why';
+@import 'question';
+@import 'answer';
+@import 'any-questions';
+@import 'footer';
+@import 'all-specifications';
+@import 'fansyBox';
+@import 'personal-data';
+
